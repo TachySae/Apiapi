@@ -1,0 +1,78 @@
+:root {
+  --bg: #0d0d0d;
+  --mint: #a3e4d7;
+  --acento: #DC143C;
+  --card: #0D0D0D;
+}
+
+* { box-sizing: border-box; }
+
+#filtro .btn{
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+#filtro .btn.activo{
+  background: #E10600;
+  border-color: #E10600;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--bg);
+  color: var(--mint);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  color: var(--acento);
+  margin: 0 0 1rem;
+  font-size: 1.8rem;
+  transition: color .3s;
+}
+
+
+
+#estado { color: var(--acento); }
+
+#lista {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+
+.piloto {
+  background: var(--card);
+  padding: 1rem;
+  border-left: 4px solid var(--acento);
+}
+
+.piloto h2 { margin: 0 0 .25rem; font-size: 1.1rem; }
+.piloto p  { margin: .15rem 0; font-size: .9rem; }
+
+.pos {
+  color: var(--acento);
+  font-size: 1.6rem;
+  float: right;
+}
+
+.radio {
+  margin-top: .6rem;
+  padding: .4rem .7rem;
+  font: inherit;
+  font-size: .85rem;
+  cursor: pointer;
+  background: transparent;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+}
+
+.radio:hover, .radio.sonando {
+  background: var(--acento);
+  color: var(--bg);
+}
+
+.radio:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
